@@ -30,3 +30,9 @@ DELETE FROM students WHERE name = "Layal";
 SELECT employees.Name, employees.Company, companies.Date FROM employees JOIN companies ON employees.Company = companies.name;
 SELECT employees.Name FROM employees JOIN companies ON employees.Company = companies.name WHERE companies.Date < 2000;
 SELECT companies.Name FROM companies JOIN employees ON companies.name = employees.Company WHERE employees.Role = "Graphic Designer";
+
+SELECT *, max(Points) FROM students;
+SELECT avg(Points) FROM students;
+SELECT count(Points) FROM students WHERE students.Points = "500";
+SELECT name FROM students WHERE students.name LIKE "%s%";
+SELECT * FROM students ORDER BY students.Points DESC;
