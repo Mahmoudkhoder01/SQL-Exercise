@@ -25,3 +25,8 @@ CREATE TABLE graduates (
 INSERT INTO graduates(ID, name, Age, Gender, Points) SELECT ID, name, Age, Gender, Points FROM students WHERE name = "Layal";
 UPDATE graduates SET Graduation = "2018-09-08" WHERE name = "Layal";
 DELETE FROM students WHERE name = "Layal";
+
+
+SELECT employees.Name, employees.Company, companies.Date FROM employees JOIN companies ON employees.Company = companies.name;
+SELECT employees.Name FROM employees JOIN companies ON employees.Company = companies.name WHERE companies.Date < 2000;
+SELECT companies.Name FROM companies JOIN employees ON companies.name = employees.Company WHERE employees.Role = "Graphic Designer";
